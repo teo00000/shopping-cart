@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color:white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 1rem;
+  gap: 1rem;
+  min-height: 250px;
+  justify-content: space-between;
+  font-size: x-large;
+  font-family: sans-serif;
+}
+button {
+  margin: 10px;
+  padding: 0.75rem;
+  background-color: rgb(3, 160, 3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.delete-btn {
+  background-color: rgb(243, 122, 35);
+}

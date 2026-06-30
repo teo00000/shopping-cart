@@ -1,0 +1,6 @@
+<app-product-list
+  [products]="(products$ | async) ?? []"
+  (addToCart)="onAddToCart($event)"
+  (deleteFromCart)="onDeleteFromCart($event)"
+></app-product-list>
+<app-cart-summary [totalPrice]="totalPrice"></app-cart-summary>
