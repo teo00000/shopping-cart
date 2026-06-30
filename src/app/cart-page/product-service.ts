@@ -25,20 +25,26 @@ export class ProductService {
     }
   ];
 
-  private products$ = new BehaviorSubject<Product[]>(this.products);
+  private cart: Product[] = [];
 
-  cart: Product[] = [];
+  private cart$ = new BehaviorSubject<Product[]>(this.cart);
 
   getProducts(): Observable<Product[]> {
-    return this.products$.asObservable();
+    return of(this.products);
+  }
+
+  getCart(): Observable<Product[]> {
+    return this.cart$.asObservable();
   }
 
   addToCart(product: Product) {
     this.cart.push(product);
+    this.cart$.next(this.cart);
   }
 
   deleteFromCart(product: Product) {
     this.cart = this.cart.filter(p => p !== product);
+    this.cart$.next(this.cart);
   }
 
   totalPrice() {
