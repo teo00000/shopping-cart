@@ -17,11 +17,4 @@ export class ProductCard {
   onAddToCart() {
     this.addToCart.emit(this.product);
   }
-
-  @Output()
-  deleteFromCart = new EventEmitter<Product>();
-  onDeleteFromCart() {
-    this.deleteFromCart.emit(this.product);
-    console.log("Product-card is clicking");
-  }
 }

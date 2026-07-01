@@ -8,21 +8,21 @@ import { BehaviorSubject, Observable, of } from 'rxjs';
 export class ProductService {
   private products: Product[] = [
     {
-      name: "Car",
-      price: 2000
+      name: 'Car',
+      price: 2000,
     },
     {
-      name: "Laptop",
-      price: 1200
+      name: 'Laptop',
+      price: 1200,
     },
     {
-      name: "Phone",
-      price: 800
+      name: 'Phone',
+      price: 800,
     },
     {
-      name: "Fridge",
-      price: 600
-    }
+      name: 'Fridge',
+      price: 600,
+    },
   ];
 
   private cart: Product[] = [];
@@ -43,7 +43,7 @@ export class ProductService {
   }
 
   deleteFromCart(product: Product) {
-    this.cart = this.cart.filter(p => p !== product);
+    this.cart = this.cart.filter((p) => p !== product);
     this.cart$.next(this.cart);
   }
 

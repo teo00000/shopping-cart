@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ProductCard } from "../product-card/product-card";
+import { ProductCard } from '../product-card/product-card';
 import { Product } from '../models/product';
 import { CommonModule } from '@angular/common';
 
@@ -18,11 +18,5 @@ export class ProductList {
   addToCart = new EventEmitter<Product>();
   onAddToCart(product: Product) {
     this.addToCart.emit(product);
-  }
-
-  @Output()
-  deleteFromCart = new EventEmitter<Product>();
-  onDeleteFromCart(product: Product) {
-    this.deleteFromCart.emit(product);
   }
 }
