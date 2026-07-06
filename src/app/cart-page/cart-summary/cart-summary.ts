@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cart-summary',
+  standalone: true,
   imports: [],
   templateUrl: './cart-summary.html',
   styleUrl: './cart-summary.css',
