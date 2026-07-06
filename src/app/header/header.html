@@ -1,0 +1,4 @@
+<header class="header">
+  <div class="logo">Shopping Cart Demo</div>
+  <button routerLink="/cart" class="cart-btn">🛒 Cart({{ (cartService.cartCount$ | async) ?? 0 }})</button>
+</header>

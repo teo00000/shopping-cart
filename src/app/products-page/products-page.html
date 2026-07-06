@@ -1,1 +1,4 @@
-<p>products-page works!</p>
+<app-product-list
+  [products]="(products$ | async) ?? []"
+  (addToCart)="onAddToCart($event)"
+></app-product-list>

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ProductCard } from '../product-card/product-card';
-import { Product } from '../models/product';
+import { Product } from '../../models/product';
 import { CommonModule } from '@angular/common';
 
 @Component({
