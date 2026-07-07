@@ -1,5 +1,13 @@
-<app-product-list
-  [products]="(products$ | async) ?? []"
-  (addToCart)="onAddToCart($event)"
-></app-product-list>
+<div class="container">
+  <h2>Cart Page</h2>
+  <div class="cart-list" *ngFor="let product of products$ | async">
+    <div class="product-info">
+      <span class="name">{{ product.name }}</span>
+      <span class="price">${{ product.price }}</span>
+    </div>
+    <button class="remove-btn" (click)="removeFromCart(product)">
+      remove
+    </button>
+  </div>
+</div>
 <app-cart-summary [totalPrice]="totalPrice"></app-cart-summary>

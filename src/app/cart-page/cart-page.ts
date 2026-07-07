@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductList } from '../products-page/product-list/product-list';
 import { CartSummary } from './cart-summary/cart-summary';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { CartService } from '../services/cart-service';
 import { Product } from '../models/product';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-cart-page',
   standalone: true,
-  imports: [ProductList, CartSummary, AsyncPipe],
+  imports: [ CartSummary, AsyncPipe, CommonModule],
   templateUrl: './cart-page.html',
   styleUrl: './cart-page.css',
 })
@@ -19,11 +19,15 @@ export class CartPage implements OnInit {
   products$!: Observable<Product[]>;
 
   ngOnInit(): void {
-    
+    this.products$ = this.cartService.cart$;
   }
 
   onAddToCart(product: Product) {
     this.cartService.addToCart(product);
+  }
+
+  removeFromCart(product: Product) {
+    this.cartService.deleteFromCart(product);
   }
 
   get totalPrice() {

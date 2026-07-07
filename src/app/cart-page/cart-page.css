@@ -1,0 +1,20 @@
+.container {
+  margin: 1rem;
+}
+
+.cart-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+
+  border-bottom: 1px solid #e5e5e5;
+  width: 50%; 
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-right: 3rem;
+}
