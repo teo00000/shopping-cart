@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +25,16 @@ export class ShoppingCart {
     },
   ];
 
-  getProducts(): Observable<Product[]> {
-    return of(this.products);
+  private productsSubject = new BehaviorSubject<Product[]>(this.products);
+
+  products$ = this.productsSubject.asObservable();
+
+  searchTerm(term: string) {
+    const filteredProducts = term === ''
+      ? this.products
+      : this.products.filter(product => 
+        product.name.toLowerCase().includes(term.toLowerCase())
+      );
+    this.productsSubject.next(filteredProducts);
   }
 }

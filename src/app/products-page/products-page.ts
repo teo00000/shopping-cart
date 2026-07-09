@@ -5,11 +5,12 @@ import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { ShoppingCart } from '../services/shopping-cart';
 import { CartService } from '../services/cart-service';
+import { SearchBar } from './search-bar/search-bar';
 
 @Component({
   selector: 'app-products-page',
   standalone: true,
-  imports: [ProductList, AsyncPipe],
+  imports: [ProductList, AsyncPipe, SearchBar],
   templateUrl: './products-page.html',
   styleUrl: './products-page.css',
 })
@@ -22,10 +23,14 @@ export class ProductsPage implements OnInit {
   products$!: Observable<Product[]>;
 
   ngOnInit(): void {
-    this.products$ = this.shoppingCartService.getProducts();
+    this.products$ = this.shoppingCartService.products$;
   }
 
   onAddToCart(product: Product) {
     this.cartService.addToCart(product);
+  }
+
+  onSearchTerm(term: string) {
+    this.shoppingCartService.searchTerm(term);
   }
 }
