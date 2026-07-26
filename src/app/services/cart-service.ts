@@ -28,6 +28,7 @@ export class CartService {
     this.cartSubject.next(updated);
   }
 
+  // Used in header to show the number of products added to cart
   cartCount$ = this.cart$.pipe(
     map(cart => cart.length)
   );
