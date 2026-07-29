@@ -13,7 +13,7 @@ A simple Shopping Cart application built with Angular to practice component comm
 
 ## Technologies
 
-- Angular
+- Angular 21
 - TypeScript
 - HTML
 - CSS
