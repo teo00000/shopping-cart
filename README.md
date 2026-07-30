@@ -69,6 +69,16 @@ http://localhost:4200/
 ng build
 ```
 
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.png)
+
+### Shopping Cart
+
+![Shopping Cart](screenshots/cart.png)
+
 ## Author
 
 Created by **Teona Papiashvili**
