@@ -21,6 +21,20 @@ A simple Shopping Cart application built with Angular to practice component comm
 - RxJS
 - BehaviorSubject
 
+## What I Learned
+
+During this project I practiced:
+
+- Building an angular application using standalone components
+- Creating reusable components
+- Managing application state with RxJS(BehaviorSubject)
+- Sharing data between components through services
+- Implementing search and filtering functionality
+- Managing shopping cart state
+- Updating UI reactively based on state changes
+- Organizing an Angular project into components, services and models
+- Writing clean, maintainable code
+
 # Project Structure
 
 - *Header* - displays the application title and the current number of products in the cart
@@ -29,7 +43,21 @@ A simple Shopping Cart application built with Angular to practice component comm
 - *Product Card* - shows product information and "Add to Cart" button
 - *Cart* - displays selected products and the total price
 
-# Prerequisites
+## Future improvements
+
+- Save the cart between sessions (Local Storage)
+- Fetch products from an API
+- Product categories
+- Sorting
+- Product details page
+- Authentication
+- Chackout flow
+- Wishlist
+- Unit and E2E tests
+- Better accessibility
+- Performance optimizations
+
+## Prerequisites
 
 Before running this project, make sure you have installed:
 
