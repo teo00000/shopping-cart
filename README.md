@@ -1,23 +1,25 @@
 # ShoppingCart
 
-A simple Shopping Cart application built with Angular to practice component communication, state management with Oservable, BehaviorSubject and building responsive user interfaces.
+A simple Shopping Cart application built with Angular to practice component communication, state management with RxJS(BehaviorSubject for reactive cart state management) and building responsive user interfaces.
 
 ## Features
 
 - Display a list of products
-- Search products by name
+- Search products in real time
 - Add product to the shopping cart
-- View the number of products in the cart in the header
-- Display all added products in the cart
-- Automatically calculate the total price of products in the cart
+- Display the current cart item count in the header
+- Automatically update the cart using RxJS BehaviorSubject
+- Calculate the total price of all items in the cart
+- Remove products from cart
 
 ## Technologies
 
 - Angular 21
 - TypeScript
-- HTML
-- CSS
-- RxJS (BehaviorSubject)
+- HTML5
+- CSS3
+- RxJS
+- BehaviorSubject
 
 # Project Structure
 
@@ -38,7 +40,11 @@ Before running this project, make sure you have installed:
 
 ### Installation
 
-Clone the repository: 
+Clone the repository:
+
+git clone https://github.com/teo00000/shopping-cart
+
+cd shopping-cart
 
 Install dependencies:
 
@@ -49,13 +55,13 @@ npm install
 Run the application: 
 
 ```bash
-npm install
+ng serve
 ```
 
 Open your browser and navigate to:
 
 ```
-http://localhost:4200
+http://localhost:4200/
 ```
 ## Build
 
@@ -65,6 +71,7 @@ ng build
 
 ## Author
 
-Created at **Teona Papiashvili**
+Created by **Teona Papiashvili**
 
-- Github: http://github/teo00000
+- Github: http://github.com/teo00000
+
